@@ -34,7 +34,7 @@ steps:
     rootFolderOrFile: './app.py'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Pipeline.Workspace).zip'
+    archiveFile: '$(Pipeline.Workspace)'
     replaceExistingArchive: true
 - task: PublishPipelineArtifact@1
   inputs:

@@ -29,3 +29,7 @@ steps:
     scriptSource: 'filePath'
     scriptPath: './app.py'
 
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    publishLocation: 'pipeline'

@@ -24,4 +24,8 @@ steps:
     pip install Flask==1.1.2
   displayName: 'Install dependencies'
 
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    scriptPath: './app.py'
 

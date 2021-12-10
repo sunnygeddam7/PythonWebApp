@@ -29,6 +29,13 @@ steps:
     scriptSource: 'filePath'
     scriptPath: './app.py'
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: './app.py'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
